@@ -1,0 +1,38 @@
+name: Code Quality
+
+on:
+  push:
+    branches:
+      - main
+      - "**" # Run on all branches
+
+jobs:
+  check-code-quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js and Install pnpm
+        uses: actions/setup-node@v3
+        with:
+          node-version: "node"
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+
+      - name: Check for console statements
+        run: |
+          # Find any instances of console
+          if grep -r "console\.\(log\|error\|debug\|info\|warn\)" . --exclude-dir={node_modules,.git} --exclude={src/lib/logger.ts,.github/workflows/console_check.yml} | grep -v "src/lib/logger.ts"; then
+            echo "Console statements found in the code. Please remove them."
+            exit 1
+          else
+            echo "No console statements found. Proceeding with commit."
+          fi

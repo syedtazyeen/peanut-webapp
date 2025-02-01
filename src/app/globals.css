@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  :root {
+    --background: 220 23% 100%;
+    --background-2: 220 23% 100%;
+    --foreground: 0 0% 3.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 222 18% 51%;
+    --primary: 49 94% 47%;
+    --primary-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --border: 222 18% 93%;
+  }
+
+  .dark {
+    --background: 220 0% 10.4%;
+    --background-2: 220 0% 10.8%;
+    --foreground: 0 0% 98%;
+    --muted: 0 0% 11.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --popover: 0 0% 16.9%;
+    --popover-foreground: 0 0% 98%;
+    --border: 0 0% 18.9%;
+  }
+
+}
+
+
+body {
+  font-family: "Nunito Sans", serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button {
+    @apply transition-colors duration-200;
+  }
+}

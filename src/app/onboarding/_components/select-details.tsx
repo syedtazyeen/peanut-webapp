@@ -3,7 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { FolderPlus, Pickaxe } from "lucide-react";
 import useOnboardStore from "@/store/onboard";
 import SelectHeader from "./select-header";
 

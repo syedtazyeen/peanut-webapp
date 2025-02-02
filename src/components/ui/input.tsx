@@ -8,11 +8,13 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   endIcon?: React.ReactNode;
   clearable?: boolean;
   error?: string;
+  inputClassName?: string;
 };
 
 function Input(
   {
     className,
+    inputClassName,
     type,
     size,
     startIcon,
@@ -43,7 +45,8 @@ function Input(
           endIcon || clearable ? "pr-8" : "",
           error
             ? "border-red-600 focus-within:border-red-600"
-            : "focus-within:border-foreground"
+            : "focus-within:border-foreground",
+          inputClassName
         )}
         ref={ref}
         value={value}

@@ -15,7 +15,7 @@ function Button({
   className,
   ...props
 }: ButtonProps) {
-  const baseStyles = "rounded-xl font-medium transition-all focus:outline-none";
+  const baseStyles = "rounded-lg font-medium transition-all focus:outline-none";
 
   const sizeStyles = {
     sm: "px-1 h-8 text-sm",

@@ -1,0 +1,1 @@
+type OnboardDataPurpose = "work" | "personal";

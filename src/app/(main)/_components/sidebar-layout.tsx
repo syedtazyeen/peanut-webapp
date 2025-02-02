@@ -38,7 +38,7 @@ export default function SidebarLayout({
         onMouseLeave={handleCollapse}
         className={cn(
           expanded ? "w-64" : "w-4",
-          "fixed h-full flex overflow-hidden",
+          "fixed h-full flex",
           "transition-all duration-200 ease-in-out"
         )}
       >

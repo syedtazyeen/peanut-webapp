@@ -3,8 +3,16 @@ import { cn } from "@/lib/utils";
 import { emptyMenu, primaryMenu } from "../_lib/menu";
 import SidebarGroup from "./sidebar-group";
 import SvgLetter from "@/components/common/svg-letter";
-import { ChevronDown, FileIcon } from "lucide-react";
+import { ChevronDown, FileIcon, GripHorizontal } from "lucide-react";
 import usePageStore from "@/store/page";
+import {
+  Dropdown,
+  DropdownContent,
+  DropdownTrigger,
+} from "@/components/ui/dropdown";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import SidebarProfile from "./sidebar-profile";
 
 export default function SidebarContent({ expanded }: { expanded: boolean }) {
   const { pages } = usePageStore();
@@ -34,15 +42,7 @@ export default function SidebarContent({ expanded }: { expanded: boolean }) {
           "transition-all duration-200 ease-in-out"
         )}
       >
-        <div className="my-2 py-2 px-1 flex items-center gap-2 rounded-lg hover:bg-foreground/5 cursor-pointer">
-          <div className="size-6 rounded-full overflow-hidden">
-            <SvgLetter letter="A" />
-          </div>
-          <p className="font-medium text-sm">workspace</p>
-          <span className="rounded-md">
-            <ChevronDown className="size-4" />
-          </span>
-        </div>
+        <SidebarProfile />
         <SidebarGroup expanded={expanded} menu={primaryMenu} />
         <SidebarGroup
           name="Workspace"

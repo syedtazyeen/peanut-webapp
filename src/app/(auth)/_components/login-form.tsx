@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { KeyRound, Loader2Icon, LoaderIcon, Mail } from "lucide-react";
+import { KeyRound, Loader2Icon, Mail } from "lucide-react";
 import { Label } from "@/components/ui/label";
 import { createClient } from "@/supabase/client";
 import useUserStore from "@/store/user";

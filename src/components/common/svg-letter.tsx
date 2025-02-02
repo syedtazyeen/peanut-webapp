@@ -21,7 +21,7 @@ const SvgLetter: React.FC<SvgLetterProps> = ({
       <rect width="100" height="100" fill="gray" stroke="black" />
       <text
         x="50%"
-        y="50%"
+        y="55%"
         fontSize="52"
         fontWeight={500}
         fill={color}

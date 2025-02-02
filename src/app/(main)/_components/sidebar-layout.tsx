@@ -15,12 +15,16 @@ export default function SidebarLayout({
 
   function handleExpand() {
     if (!collapsed) return;
-    setExpanded(true);
+    setTimeout(() => {
+      setExpanded(true);
+    }, 200);
   }
 
   function handleCollapse() {
     if (!collapsed) return;
-    setExpanded(false);
+    setTimeout(() => {
+      setExpanded(false);
+    }, 200);
   }
 
   useEffect(() => {

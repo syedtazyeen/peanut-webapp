@@ -1,6 +1,6 @@
 import React from "react";
-import LoginForm from "../_components/login-form";
 import Link from "next/link";
+import RegisterForm from "../_components/register-form";
 
 export const metadata = {
   title: "Login",
@@ -13,18 +13,18 @@ export default function Login() {
       <div className="h-48 flex flex-col justify-center">
         <p className="text-2xl font-bold">Collaborate. Organize. Achieve.</p>
         <p className="text-2xl font-semibold text-muted-foreground">
-          Log in to your account
+          Create a new account
         </p>
       </div>
-      <LoginForm />
+      <RegisterForm />
       <div>
         <p className="text-muted-foreground text-sm">
-          Don't have an account?{" "}
+          Already have an account?{" "}
           <Link
-            href="/signup"
+            href="/login"
             className="cursor-pointer text-foreground hover:underline"
           >
-            Create account
+            Login
           </Link>
         </p>
       </div>

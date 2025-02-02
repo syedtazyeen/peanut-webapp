@@ -26,7 +26,6 @@ export default function SidebarGroup({
   const { addPage } = usePageStore();
 
   function handleNavigation(pageId: string) {
-    console.log(pageId);
     router.push(pageId);
   }
 
